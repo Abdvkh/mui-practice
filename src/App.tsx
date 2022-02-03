@@ -1,11 +1,57 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import {
+    Typography,
+    AppBar,
+    Card,
+    CardActions,
+    CardMedia,
+    CssBaseline,
+    Grid,
+    Toolbar,
+    Container,
+    Button
+} from '@material-ui/core';
+import { PhotoCamera } from '@material-ui/icons';
 
 const App = () => {
     return (
-        <div>
-            <Typography variant="h1">Hello world!</Typography>
-        </div>
+        <>
+            <CssBaseline />
+            <AppBar position="relative">
+                <Toolbar>
+                    <PhotoCamera />
+                    <Typography variant="h6">
+                        Photo Album
+                    </Typography>
+                </Toolbar>
+            </AppBar>
+            <main>
+                <div>
+                    <Container maxWidth="sm">
+                        <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
+                            Photo Album
+                        </Typography>
+                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                            Hello everyone This is a photo album and I'm trying to make it as long as possible so that it looks long and beautiful.
+                        </Typography>
+                        <div>
+                            <Grid container spacing={2} justify="center">
+                                <Grid item>
+                                    <Button variant="contained" color="primary">
+                                        See my photos
+                                    </Button>
+                                </Grid>
+                                <Grid item>
+                                    <Button variant="outlined" color="secondary">
+                                        Secondary Action
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </div>
+                    </Container>
+                </div>
+            </main>
+        </>
     )
 }
 
